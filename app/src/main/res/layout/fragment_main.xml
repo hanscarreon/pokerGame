@@ -1,0 +1,107 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+    android:background="@drawable/pokerbackground"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/betAmountButton"
+            android:text="2"
+            android:fontFamily="@font/robotocondensed"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:minWidth="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="changeBet"/>
+
+        <Button
+            android:fontFamily="@font/robotocondensed"
+            android:layout_centerInParent="true"
+            android:id="@+id/betButton"
+            android:text="Bet!"
+            android:layout_toRightOf="@id/betAmountButton"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="playerAction"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/checkButton"
+            android:text="Check"
+            android:fontFamily="@font/robotocondensed"
+            android:layout_toRightOf="@id/betButton"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="playerAction"/>
+
+        <com.example.funnypoker.View.CardView
+            android:id="@+id/dealerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/robotocondensed"
+            android:id="@+id/dealerChips"
+            android:layout_below="@id/dealerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/colorYellow"
+            android:text="WINS"
+            android:fontFamily="@font/robotocondensed"
+            android:id="@+id/pot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <com.example.funnypoker.View.CardView
+            android:id="@+id/playerView"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@id/betButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/robotocondensed"
+            android:id="@+id/playerChips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/playerView"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:fontFamily="@font/robotocondensed"
+            android:id="@+id/newHandButton"
+            android:text="Deal"
+            android:layout_toRightOf="@id/checkButton"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:onClick="newHand"/>
+
+    </RelativeLayout>
+</RelativeLayout>

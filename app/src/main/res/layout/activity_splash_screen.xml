@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SplashScreen">
+
+    <ImageView
+        android:background="@drawable/pokerbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        android:text="FUNNY POKER"
+        android:layout_marginBottom="50dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/linearLayout"
+        android:fontFamily="@font/robotocondensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginRight="25dp"
+            android:background="@drawable/play"
+            android:id="@+id/btnPlay"
+            android:layout_centerInParent="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <ImageView
+            android:id="@+id/btnInstructions"
+            android:background="@drawable/instructions"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/btnPlay"
+            android:layout_centerInParent="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnExit"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/linearLayout"
+        android:background="@drawable/exit"
+        android:layout_marginLeft="20dp"
+        android:layout_centerInParent="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+</RelativeLayout>

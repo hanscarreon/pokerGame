@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/pokerbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Instructions">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btnBack"
+                android:background="@drawable/arrow_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:id="@+id/txtTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:fontFamily="@font/robotocondensed"
+        android:text="INSTRUCTIONS"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        android:text="1— A player who thinks he has a good hand (or who wants the other players to think he has a good hand) may increase the wager required to continue playing.
+2Fold — A player who thinks his hand is not good enough to win and who does not want to wager the increased amount may lay down his cards. He cannot win the hand, but he also will not lose any more chips.
+3Call — Once a player has raised the stakes, each player must decide whether to raise the stakes again, to give in and fold his hand, or to call, which means to equal the amount wagered by the player who raised.
+4Check — If no one has increased the wager required to continue, a player may stand pat by checking, or passing on his option to bet."
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/robotocondensedlight"
+        android:layout_below="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
